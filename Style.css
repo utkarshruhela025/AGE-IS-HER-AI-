@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+.status-box {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.status-box.standby { background-color: #334155; color: #94a3b8; }
+.status-box.active { background-color: #065f46; color: #34d399; }
+.status-box.alert { background-color: #991b1b; color: #f87171; animation: pulse 1s infinite; }
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn { background-color: #0284c7; color: white; margin-right: 2%; }
+.danger-btn { background-color: #e11d48; color: white; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.telemetry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.metric {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.metric label {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.metric span {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+#map {
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.logs-container {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #a855f7;
+    max-height: 120px;
+    overflow-y: auto;
+    font-family: monospace;
+}

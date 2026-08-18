@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisHer AI - Emergency Sentinel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ AegisHer AI</h1>
+            <p class="subtitle">Zero-Touch Stealth Safety Infrastructure</p>
+        </header>
+
+        <!-- Monitoring Controls -->
+        <section class="card">
+            <h2>Live Protection Status</h2>
+            <div id="status-box" class="status-box standby">SYSTEM STANDBY</div>
+            
+            <button id="start-btn" class="btn primary-btn">Activate Monitoring</button>
+            <button id="stop-btn" class="btn danger-btn" disabled>Stop Monitoring</button>
+        </section>
+
+        <!-- Live Sensor Feeds -->
+        <section class="card">
+            <h2>Edge Sensor Telemetry</h2>
+            <div class="telemetry-grid">
+                <div class="metric">
+                    <label>Acoustic Decibels</label>
+                    <span id="audio-level">0 dB</span>
+                </div>
+                <div class="metric">
+                    <label>Motion Acceleration</label>
+                    <span id="motion-level">0.0 m/s²</span>
+                </div>
+                <div class="metric">
+                    <label>Threat Score</label>
+                    <span id="threat-score">0.00</span>
+                </div>
+            </div>
+            <p class="hint">💡 <em>Say "Help" or "Red Orchid", shout loudly, or shake your phone to trigger.</em></p>
+        </section>
+
+        <!-- Live Map & Evidence Vault -->
+        <section class="card">
+            <h2>Guardian Response Dashboard</h2>
+            <div id="map"></div>
+            <div id="logs" class="logs-container">
+                <p>Awaiting events...</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Leaflet JS for Maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
